@@ -8,8 +8,9 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("zcursopfrapp1.controller.View1", {
-            onInit: function () {
+           onInit: function () {
 
             }
         });
+        
     });
