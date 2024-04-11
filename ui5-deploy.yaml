@@ -1,0 +1,25 @@
+specVersion: "2.6"
+type: application
+metadata:
+  name: 'zcursopfrapp1'
+builder:
+  customTasks:
+  - name: deploy-to-abap
+    afterTask: replaceVersion
+    configuration:
+      target:
+        url: https://sapfioriexed.exedconsulting.com:44300
+        client: '900'
+        auth: basic
+        params:
+          sap-language: en
+      credentials:
+        username: env:UI5_USERNAME
+        password: env:UI5_PASSWORD
+      app:
+        name: zcursopfrapp1
+        package: ZG_CURSO_FIORI
+        transport: S4HK902907
+      exclude:
+      - .*\.test.js
+      - internal.md
