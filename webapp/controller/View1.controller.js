@@ -30,6 +30,7 @@ sap.ui.define([
                     Nome: nome,
                     ProjetoSegw: proj,
                     Email: email
+                    
 
                 }
                 this.getView().getModel().create('/AlunoFioriSet', oDados, {
