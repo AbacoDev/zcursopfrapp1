@@ -10,6 +10,9 @@
             <VBox id="_IDGenVBox2" class="sapUiSmallMargin" width="100%">
                 <HBox id="_IDGenHBox1" renderType="Bare">
                     <Button id="_IDGenButton1" text="Criar" press="onCreate" />
+                    <Button id="_IDGenButton2" text="Deletar" press="onDelete" />
+                    <Button id="_IDGenButton3" text="Update" press="onUpdate" />
+                    <Button id="_IDGenButton4" text="Get" press="onQuery" />
                     <VBox id="_IDGenVBox1" class="sapUiSmallMargin" width="100%">
                         <f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false" ariaLabelledBy="Title1">
                             <f:content>
@@ -18,7 +21,7 @@
                                     <ToolbarSpacer id="_IDGenToolbarSpacer1" />
                                 </Toolbar>
                                 <Label id="_IDGenLabel1" text="{i18n>lblUsuario}" />
-                                <Input id="idusuario" />
+                                <Input id="idusuario" change="onChangeUsuario"/>
                                 <Label id="_IDGenLabel2" text="{i18n>lblNome}" />
                                 <Input id="idnome" />
 
@@ -36,7 +39,7 @@
                             <Label id="_IDGenLabel5"></Label>
                         </FlexBox>
                         <f:SimpleForm id="SimpleFormToolbar2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
-                            <Table id="idtablealuno" items="{/AlunoFioriSet}">
+                            <Table id="idtablealuno" items="{/AlunoFioriSet}" mode="SingleSelect">
                                 <!--header-->
                                 <columns>
                                     <Column id="_IDGenColumn1">
